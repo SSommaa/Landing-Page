@@ -1,8 +1,12 @@
 <script setup>
 import img from '../assets/Images/NewYorkHero.webp'
-
+import router from '@/router/router'
 // Función para manejar el desplazamiento
 import { ref, onMounted, onUnmounted } from 'vue'
+
+const navigate = (where) => {
+  router.push(where)
+}
 
 const scrollY = ref(0)
 
@@ -39,6 +43,7 @@ onUnmounted(() => {
             Desde el concepto hasta la finalización, hacemos realidad tus sueños de construcción.
           </p>
           <button
+            @click="navigate('contacta')"
             class="bg-transparent border-2 border-white text-white font-bold py-4 px-10 rounded-full hover:bg-white/10 hover:border-primary hover:text-primary transition-all duration-300 text-lg shadow-xl hover:shadow-2xl"
           >
             Obtén un Presupuesto Gratis

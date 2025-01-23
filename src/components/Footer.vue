@@ -15,7 +15,7 @@ const scrollToSection = (sectionId) => {
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <!-- Columna 1: Información de la empresa -->
         <div class="space-y-4">
-          <h3 class="text-2xl font-bold text-primary">Constructora Excelencia</h3>
+          <h3 class="text-2xl font-bold text-primary">Constructora BestBuild</h3>
           <p class="text-gray-400 text-sm leading-relaxed">
             Más de 40 años construyendo sueños y transformando espacios. Comprometidos con la
             calidad y la innovación en cada proyecto.
@@ -133,7 +133,7 @@ const scrollToSection = (sectionId) => {
       <!-- Sección inferior -->
       <div class="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
         <div class="mb-4 md:mb-0">
-          © 2024 Constructora Excelencia. Todos los derechos reservados.
+          © 2024 Constructora BestBuild. Todos los derechos reservados.
         </div>
         <div class="flex space-x-4">
           <a href="#" class="hover:text-primary transition-colors">Términos de servicio</a>
