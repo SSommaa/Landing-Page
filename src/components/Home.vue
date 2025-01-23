@@ -5,6 +5,7 @@ import Services from './Services.vue'
 import Footer from './Footer.vue'
 import Customers from './Customers.vue'
 import FeaturedProjects from './FeaturedProjects.vue'
+import CallToAction from './CallToAction.vue'
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import FeaturedProjects from './FeaturedProjects.vue'
     <Services />
     <FeaturedProjects />
     <Customers />
+    <CallToAction />
     <Footer />
   </div>
 </template>

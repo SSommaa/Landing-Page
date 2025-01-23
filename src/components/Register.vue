@@ -6,6 +6,8 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 const email = ref('')
 const password = ref('')
+
+// Objeto reactivo para almacenar mensajes de error
 const errors = reactive({
   email: '',
   password: '',
