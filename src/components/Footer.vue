@@ -1,3 +1,14 @@
+<script setup>
+const scrollToSection = (sectionId) => {
+  const section = document.getElementById(sectionId)
+  if (section) {
+    section.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
+  }
+}
+</script>
 <template>
   <footer class="bg-gray-900 text-white pt-16 pb-8">
     <div class="container mx-auto px-4">
@@ -19,22 +30,36 @@
           </div>
         </div>
 
-        <!-- Columna 2: Enlaces rápidos -->
+        <!-- En la sección de Enlaces Rápidos -->
         <div class="space-y-4">
           <h4 class="text-lg font-semibold">Enlaces Rápidos</h4>
           <ul class="space-y-2">
             <li>
-              <a class="text-gray-400 hover:text-primary transition-colors">Sobre nosotros</a>
+              <a
+                href="#about"
+                @click.prevent="scrollToSection('about')"
+                class="text-gray-400 hover:text-primary transition-colors cursor-pointer"
+              >
+                Sobre nosotros
+              </a>
             </li>
             <li>
-              <a class="text-gray-400 hover:text-primary transition-colors">Proyectos</a>
+              <a
+                href="#projects"
+                @click.prevent="scrollToSection('projects')"
+                class="text-gray-400 hover:text-primary transition-colors cursor-pointer"
+              >
+                Proyectos
+              </a>
             </li>
             <li>
-              <a class="text-gray-400 hover:text-primary transition-colors">Servicios</a>
-            </li>
-            <li><a class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
-            <li>
-              <a class="text-gray-400 hover:text-primary transition-colors">Contacto</a>
+              <a
+                href="#services"
+                @click.prevent="scrollToSection('services')"
+                class="text-gray-400 hover:text-primary transition-colors cursor-pointer"
+              >
+                Servicios
+              </a>
             </li>
           </ul>
         </div>

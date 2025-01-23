@@ -11,10 +11,9 @@ import CallToAction from './CallToAction.vue'
 <template>
   <div class="">
     <hero />
-    <AboutUs />
-    <Services />
-    <FeaturedProjects />
-    <Customers />
+    <AboutUs id="about" />
+    <Services id="services" />
+    <FeaturedProjects id="projects" />
     <CallToAction />
     <Footer />
   </div>

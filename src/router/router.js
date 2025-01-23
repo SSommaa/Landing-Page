@@ -38,8 +38,18 @@ const routes = [
 
 // Crear el enrutador
 const router = createRouter({
-  history: createWebHistory(), // Usar el historial HTML5 para navegación sin recargar la página
-  routes, // Las rutas definidas anteriormente
+  history: createWebHistory(),
+  routes,
+  scrollBehavior(to) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+        top: 100, // Ajusta el espacio del header fijo
+      }
+    }
+    return { top: 0 }
+  },
 })
 
 router.beforeEach((to, from, next) => {
