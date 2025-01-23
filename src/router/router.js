@@ -5,6 +5,7 @@ import Home from '../components/Home.vue'
 import Login from '../components/Login.vue'
 import Register from '../components/Register.vue'
 import Profile from '../components/Profile.vue'
+import ContactForm from '../components/ContactForm.vue'
 // Definir las rutas
 const routes = [
   {
@@ -27,6 +28,11 @@ const routes = [
     name: 'Profile',
     component: Profile,
     meta: { requiresAuth: true }, // Protege esta ruta
+  },
+  {
+    path: '/contacta',
+    name: 'ContactForm',
+    component: ContactForm,
   },
 ]
 
