@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from 'vue'
-
 // Logos como un array
 const logos = [
   {

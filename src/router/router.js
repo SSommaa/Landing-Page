@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-// Importación de componentes o vistas
+// Importación de componentes
 import Home from '../components/Home.vue'
 import Login from '../components/Login.vue'
 import Register from '../components/Register.vue'
@@ -10,7 +10,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home, // Corregida la ruta
+    component: Home,
   },
   {
     path: '/login',

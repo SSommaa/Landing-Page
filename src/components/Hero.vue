@@ -39,7 +39,7 @@ onUnmounted(() => {
             Desde el concepto hasta la finalización, hacemos realidad tus sueños de construcción.
           </p>
           <button
-            class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
+            class="bg-transparent border-2 border-white text-white font-bold py-4 px-10 rounded-full hover:bg-white/10 hover:border-primary hover:text-primary transition-all duration-300 text-lg shadow-xl hover:shadow-2xl"
           >
             Obtén un Presupuesto Gratis
           </button>

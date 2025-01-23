@@ -13,7 +13,6 @@ const navigate = (where) => {
 <template>
   <div class="p-6">
     <div
-      @click="navigate('{{ descripcion }}')"
       class="relative w-full md:w-full h-96 bg-gray-100 rounded-lg overflow-hidden shadow-lg group"
     >
       <img

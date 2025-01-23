@@ -14,11 +14,11 @@ const handleLogin = async () => {
       email: email.value,
       password: password.value,
     })
-
+    // Almacenamos el token
     localStorage.setItem('authToken', response.data.token)
     router.push({ name: 'Profile' })
   } catch (error) {
-    errorMessage.value = error.response?.data?.error || 'Error de conexión'
+    errorMessage.value = error.response.data.error || 'Error de conexión'
   }
 }
 </script>
