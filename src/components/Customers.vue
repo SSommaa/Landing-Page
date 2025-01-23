@@ -1,5 +1,5 @@
 <script setup>
-import CustomerCard from './CustomerCard.vue'
+import CustomerCard from './Cards/CustomerCard.vue'
 </script>
 <template>
   <section class="py-12 bg-gray-100">

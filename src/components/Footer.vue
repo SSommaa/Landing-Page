@@ -6,7 +6,7 @@
         <div class="space-y-4">
           <h3 class="text-2xl font-bold text-primary">Constructora Excelencia</h3>
           <p class="text-gray-400 text-sm leading-relaxed">
-            Más de 20 años construyendo sueños y transformando espacios. Comprometidos con la
+            Más de 40 años construyendo sueños y transformando espacios. Comprometidos con la
             calidad y la innovación en cada proyecto.
           </p>
           <div class="flex items-center mt-4 space-x-2">
@@ -24,19 +24,17 @@
           <h4 class="text-lg font-semibold">Enlaces Rápidos</h4>
           <ul class="space-y-2">
             <li>
-              <a href="#" class="text-gray-400 hover:text-primary transition-colors"
-                >Sobre nosotros</a
-              >
+              <a class="text-gray-400 hover:text-primary transition-colors">Sobre nosotros</a>
             </li>
             <li>
-              <a href="#" class="text-gray-400 hover:text-primary transition-colors">Proyectos</a>
+              <a class="text-gray-400 hover:text-primary transition-colors">Proyectos</a>
             </li>
             <li>
-              <a href="#" class="text-gray-400 hover:text-primary transition-colors">Servicios</a>
+              <a class="text-gray-400 hover:text-primary transition-colors">Servicios</a>
             </li>
-            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
+            <li><a class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
             <li>
-              <a href="#" class="text-gray-400 hover:text-primary transition-colors">Contacto</a>
+              <a class="text-gray-400 hover:text-primary transition-colors">Contacto</a>
             </li>
           </ul>
         </div>
