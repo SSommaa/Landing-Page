@@ -50,9 +50,9 @@ const handleRegister = async () => {
     localStorage.setItem('authToken', response.data.token)
 
     // Redirigir a área protegida
-    router.push({ name: 'Home' })
+    router.push({ name: 'Profile' })
   } catch (error) {
-    alert(error.response?.data?.error || 'Error en el registro')
+    alert(error.response.data.error || 'Error en el registro')
   }
 }
 </script>

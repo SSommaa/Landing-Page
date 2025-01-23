@@ -21,6 +21,9 @@ const navigate = (where) => {
         <button @click="navigate('contacta')" class="hover:bg-gray-700 px-4 py-2 rounded">
           Contacta
         </button>
+        <button @click="navigate('Profile')" class="hover:bg-gray-700 px-4 py-2 rounded">
+          Profile
+        </button>
       </div>
     </div>
   </nav>
