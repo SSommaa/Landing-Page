@@ -30,3 +30,14 @@ npm install
 ```sh
 npm run dev
 ```
+
+## Estructura del proyecto
+
+/src
+├── components/ # Componentes reutilizables
+├── router/ # Configuración de rutas
+├── assets/ # Recursos estáticos
+├── services/ # Lógica de autenticación
+└── views/ # Vistas principales
+
+##
