@@ -57,7 +57,7 @@ const logos = [
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
-          class="w-full h-full fill-current text-gray-700"
+          class="w-full h-full mr-6 fill-current text-gray-700"
         >
           <path :d="logo.path" />
         </svg>
