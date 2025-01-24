@@ -1,8 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import Constructora from '../assets/Images/Constructora.webp'
 const scrollY = ref(0)
-const observedElements = ref([])
 
 // Función para manejar el desplazamiento
 const handleScroll = () => {

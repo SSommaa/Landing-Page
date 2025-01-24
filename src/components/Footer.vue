@@ -30,7 +30,7 @@ const scrollToSection = (sectionId) => {
           </div>
         </div>
 
-        <!-- En la sección de Enlaces Rápidos -->
+        <!-- Columna 2: Sección de Enlaces Rápidos -->
         <div class="space-y-4">
           <h4 class="text-lg font-semibold">Enlaces Rápidos</h4>
           <ul class="space-y-2">

@@ -1,7 +1,6 @@
 <script setup>
 import img from '../assets/Images/NewYorkHero.webp'
 import router from '@/router/router'
-// Función para manejar el desplazamiento
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const navigate = (where) => {
@@ -24,7 +23,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="relative w-screen h-screen overflow-hidden">
+  <div class="relative w-full h-screen overflow-hidden">
     <!-- Imagen con efecto parallax -->
     <div
       :style="{ transform: `translateY(${scrollY * 0.5}px)` }"
