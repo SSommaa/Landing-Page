@@ -50,7 +50,7 @@ export const handleLogin = async (email, password) => {
 
         alertify.success('Inicio de sesión exitoso')
       } else {
-        alertify.error('Contraseña incorrecta')
+        alertify.error('Email o contraseña incorrectos')
       }
     } else {
       alertify.error('El usuario no está registrado')
