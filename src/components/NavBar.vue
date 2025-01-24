@@ -28,7 +28,7 @@ onMounted(() => {
 <template>
   <nav class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-70 text-white px-6 py-4 z-10">
     <div class="container mx-auto flex items-center justify-between movil">
-      <h1 @click="navigate('/')" class="text-2xl font-bold cursor-pointer">BestBuild</h1>
+      <h1 @click="navigate('/')" class="text-2xl font-bold cursor-pointer pl-1">BestBuild</h1>
 
       <div class="flex items-center space-x-6">
         <button
@@ -71,6 +71,7 @@ onMounted(() => {
   }
   h1 {
     margin-left: 10px;
+    padding-left: 1;
   }
   .movil {
     flex-wrap: wrap;
