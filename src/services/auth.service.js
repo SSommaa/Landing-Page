@@ -16,6 +16,12 @@ export const handleRegister = async (email, password) => {
 
     const storedUsers = JSON.parse(localStorage.getItem('users')) || []
 
+    const user = storedUsers.find((user) => user.email === email.value)
+    if (user) {
+      alertify.error('El email ya está registrado. Intenta con otro.')
+      return
+    }
+
     const newUser = {
       email: email.value,
       password: password.value,
