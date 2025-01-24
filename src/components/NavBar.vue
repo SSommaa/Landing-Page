@@ -22,7 +22,7 @@ const navigate = (where) => {
           Contacta
         </button>
         <button @click="navigate('Profile')" class="hover:bg-gray-700 px-4 py-2 rounded">
-          Profile
+          Perfil
         </button>
       </div>
     </div>
