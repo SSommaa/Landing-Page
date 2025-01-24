@@ -64,13 +64,13 @@ npm  run  dev
 
 ## Decisiones Técnicas
 
-He decidido utilizar la estructura que muestro anteriormente debido a que facilita la búsqueda de funcionalidades concretas, si el proyecto fuera más grande y lo tuviera todo en una misma carpeta se complicaría mucho encontrar la funcionalidad requerida, además he considerado que tenía que poner esos nombres a las carpetas porque eran los nombres más intuitivos.
+Basandome en los estandares de la comunidad de desarrolladores para la estructura que muestro anteriormente debido a que facilita la búsqueda de funcionalidades concretas, no he decidido yo los nombres pero si considero que son los mejores nombres posibles.
 
-He decidido guardar los datos del user en local storage para poder hacer pruebas de login debido a que la API no proporciona un password para el login, es mala práctica y se debería de guardar encriptado en la BBDD.
+Considerando que la API proporcionada no facilitaba passwords para hacer las comprobaciónes de login he llegado a la conclusion de que una posible seria almacenar los datos en localStorage, aunque no es una practica recomendable ya que se deberia almacenar en la base de datos de manera encriptada, para poder hacer pruebas es una solución factible a corto plazo.
 
-He decidido utilizar axios para realizar las peticiones debido a que es mas sencillo de utilizar y captura los errores de red y de HTTP automáticamente.
+Me he decantado por utilizar axios para realizar las peticiones debido a que es mas sencillo de utilizar y captura los errores de red y de HTTP automáticamente.
 
-He decidido utilizar Tailwind frente a Bootstrap porque considero que Tailwind te permite un mayor nivel de personalización.
+Tailwind me parece una mejor opción frente a Bootstrap porque considero que te permite un mayor nivel de personalización.
 
 Debido a que los requerimientos eran únicamente interactuar con un endpoint en los formularios de Login y Register he decidido tan solo utilizar 2 datos proporcionados por la API, el email y el token.
 
