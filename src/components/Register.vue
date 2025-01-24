@@ -1,7 +1,16 @@
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
 import axios from 'axios'
 import { useRouter } from 'vue-router'
+import alertify from 'alertifyjs'
+import 'alertifyjs/build/css/alertify.min.css'
+import 'alertifyjs/build/css/themes/default.min.css'
+
+onMounted(() => {
+  if (localStorage.getItem('authToken')) {
+    router.push('profile')
+  }
+})
 
 const router = useRouter()
 const email = ref('')
@@ -54,7 +63,7 @@ const handleRegister = async () => {
     // Redirigir a área protegida
     router.push({ name: 'Profile' })
   } catch (error) {
-    alert(error.response.data.error || 'Error en el registro')
+    alertify.warning(error.response.data.error || 'Error en el registro')
   }
 }
 </script>

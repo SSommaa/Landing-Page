@@ -45,7 +45,7 @@ onMounted(() => {
       ¿Quiénes somos?
     </h2>
     <p
-      class="observe text-lg text-gray-600 leading-relaxed text-justify opacity-0 transition-opacity duration-1000"
+      class="observe text-lg text-gray-600 leading-relaxed opacity-0 transition-opacity duration-1000"
     >
       En BestBuild, somos líderes en construcción y diseño con décadas de experiencia transformando
       ideas en realidades. Desde pequeños proyectos residenciales hasta grandes desarrollos

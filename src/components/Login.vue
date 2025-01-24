@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import { useRouter } from 'vue-router'
 
@@ -7,6 +7,12 @@ const router = useRouter()
 const email = ref('')
 const password = ref('')
 const errorMessage = ref('')
+
+onMounted(() => {
+  if (localStorage.getItem('authToken')) {
+    router.push('profile')
+  }
+})
 
 const handleLogin = async () => {
   try {

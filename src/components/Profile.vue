@@ -14,7 +14,7 @@ onMounted(() => {
 
 onMounted(async () => {
   try {
-    const response = await axios.get('https://reqres.in/api/users/4') // Endpoint de ejemplo
+    const response = await axios.get('https://reqres.in/api/users/8') // Endpoint de ejemplo
     user.value = response.data.data
   } catch (error) {
     console.error('Error obteniendo datos del usuario:', error)
@@ -28,7 +28,7 @@ const handleLogout = () => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-100 p-8">
+  <div class="min-h-screen bg-gray-100 p-8 mt-16">
     <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-6">
       <h1 class="text-3xl font-bold text-gray-800 mb-6">Perfil de Usuario</h1>
 

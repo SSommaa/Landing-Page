@@ -68,7 +68,7 @@ const logos = [
 
 <style>
 .animate {
-  animation: animate 10s linear infinite;
+  animation: animate 30s linear infinite;
 }
 @keyframes animate {
   from {

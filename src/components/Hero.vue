@@ -43,7 +43,7 @@ onUnmounted(() => {
           </p>
           <button
             @click="navigate('contacta')"
-            class="bg-transparent border-2 border-white text-white font-bold py-4 px-10 rounded-full hover:bg-white/10 hover:border-primary hover:text-primary transition-all duration-300 text-lg shadow-xl hover:shadow-2xl"
+            class="bg-white border-2 border-gray-600 text-gray-600 font-bold py-4 px-10 rounded-full text-lg shadow-xl hover:shadow-2xl"
           >
             Obtén un Presupuesto Gratis
           </button>
