@@ -1,7 +1,7 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-import axios from 'axios'
+import { ref, onMounted, onUpdated } from 'vue'
 import { useRouter } from 'vue-router'
+import { handleLogin } from '@/services/auth.service'
 
 const router = useRouter()
 const email = ref('')
@@ -14,16 +14,14 @@ onMounted(() => {
   }
 })
 
-const handleLogin = async () => {
-  try {
-    const response = await axios.post('https://reqres.in/api/login', {
-      email: email.value,
-      password: password.value,
-    })
-    localStorage.setItem('authToken', response.data.token)
-    router.push({ name: 'Profile' })
-  } catch (error) {
-    errorMessage.value = error.response.data.error || 'Error de conexión'
+const Login = async () => {
+  await handleLogin(email, password)
+  const token = localStorage.getItem('authToken')
+  if (token) {
+    // Redirigir solo cuando el token esté correctamente guardado
+    router.push('profile')
+  } else {
+    throw new Error('Error al guardar el token en localStorage.')
   }
 }
 </script>
@@ -33,7 +31,7 @@ const handleLogin = async () => {
     <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
       <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Iniciar Sesión</h2>
 
-      <form @submit.prevent="handleLogin" class="space-y-6">
+      <form @submit.prevent="Login" class="space-y-6">
         <div>
           <label class="block text-gray-700 mb-2">Email:</label>
           <input

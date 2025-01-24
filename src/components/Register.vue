@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router'
 import alertify from 'alertifyjs'
 import 'alertifyjs/build/css/alertify.min.css'
 import 'alertifyjs/build/css/themes/default.min.css'
-
+import { handleRegister } from '@/services/auth.service'
 onMounted(() => {
   if (localStorage.getItem('authToken')) {
     router.push('profile')
@@ -48,22 +48,16 @@ const validateForm = () => {
   return isValid
 }
 
-const handleRegister = async () => {
-  if (!validateForm()) return
-
-  try {
-    const response = await axios.post('https://reqres.in/api/register', {
-      email: email.value,
-      password: password.value,
-    })
-
-    // Almacenar el token JWT
-    localStorage.setItem('authToken', response.data.token)
-
-    // Redirigir a área protegida
-    router.push({ name: 'Profile' })
-  } catch (error) {
-    alertify.warning(error.response.data.error || 'Error en el registro')
+const register = async () => {
+  if (validateForm) {
+    await handleRegister(email, password)
+    const token = localStorage.getItem('authToken')
+    if (token) {
+      // Redirigir solo cuando el token esté correctamente guardado
+      router.push('profile')
+    } else {
+      throw new Error('Error al guardar el token en localStorage.')
+    }
   }
 }
 </script>
@@ -73,7 +67,7 @@ const handleRegister = async () => {
     <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
       <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Registro</h2>
 
-      <form @submit.prevent="handleRegister" class="space-y-6">
+      <form @submit.prevent="register" class="space-y-6">
         <div>
           <label class="block text-gray-700 mb-2">Email:</label>
           <input

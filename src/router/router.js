@@ -27,7 +27,6 @@ const routes = [
     path: '/profile',
     name: 'Profile',
     component: Profile,
-    meta: { requiresAuth: true }, // Protege esta ruta
   },
   {
     path: '/contacta',
@@ -50,14 +49,6 @@ const router = createRouter({
     }
     return { top: 0 }
   },
-})
-
-router.beforeEach((to, from, next) => {
-  if (to.meta.requiresAuth && !localStorage.getItem('authToken')) {
-    next({ name: 'Login' }) // Redirige a login si no está autenticado
-  } else {
-    next() // Permite continuar
-  }
 })
 
 export default router
