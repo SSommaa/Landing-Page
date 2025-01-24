@@ -33,7 +33,7 @@ const services = [
         >
           <component :is="service.icon" size="40" class="text-yellow-500 mb-4 mx-auto" />
           <h3 class="text-xl font-semibold mb-2">{{ service.title }}</h3>
-          <p class="text-gray-600">{{ service.description }}</p>
+          <p class="text-gray-600 text-lg">{{ service.description }}</p>
         </div>
       </div>
     </div>
