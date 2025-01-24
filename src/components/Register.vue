@@ -47,7 +47,7 @@ const validateForm = () => {
 }
 
 const register = async () => {
-  if (validateForm) {
+  if (validateForm()) {
     await handleRegister(email, password)
     const token = localStorage.getItem('authToken')
     if (token) {
