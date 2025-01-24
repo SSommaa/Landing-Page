@@ -1,35 +1,32 @@
 # Landing-page
 
-This template should help get you started developing with Vue 3 in Vite.
+Este proyecto es un concepto de landing para una prueba tecnica
 
-## Recommended IDE Setup
+## Caracteristicas principales
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Diseño Responsive** adaptado a todos los dispositivos
+- **Sistema de Autenticación** (Login/Register/Perfil)
 
-## Customize configuration
+## Tecnologías Usadas
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- **Frontend** Vue 3 + Composition API
+- **Estilos** Tailwind CSS
+- **Iconos** Lucide Vue
+- **Enrutamiento** Vue Router
 
-## Project Setup
+## Instalación
 
 ```sh
+git clone https://github.com/SSommaa/Landing-Page.git
+```
+
+```sh
+cd .\Landing-page\
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Inicialización
 
 ```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
