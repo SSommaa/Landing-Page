@@ -1,5 +1,5 @@
 <script setup>
-import CustomerCard from './CustomerCard.vue'
+import CustomerCard from './Cards/CustomerCard.vue'
 </script>
 <template>
   <section class="py-12 bg-gray-100">
@@ -10,7 +10,7 @@ import CustomerCard from './CustomerCard.vue'
         aliados en diversos sectores. Desde reconocidas marcas globales hasta familias que buscan
         construir su hogar ideal, todos comparten un objetivo común: calidad y confianza.
       </p>
-      <ul class="text-left text-lg space-y-4">
+      <ul class="text-lg space-y-4 text-center">
         <li>
           🤝 <strong>Confianza Comprobada:</strong> Más de <span>[40]</span> años de experiencia
           respaldan nuestro liderazgo en la industria.

@@ -1,8 +1,11 @@
 <script setup>
 import img from '../assets/Images/NewYorkHero.webp'
-
-// Función para manejar el desplazamiento
+import router from '@/router/router'
 import { ref, onMounted, onUnmounted } from 'vue'
+
+const navigate = (where) => {
+  router.push(where)
+}
 
 const scrollY = ref(0)
 
@@ -20,7 +23,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="relative w-screen h-screen overflow-hidden">
+  <div class="relative w-full h-screen overflow-hidden">
     <!-- Imagen con efecto parallax -->
     <div
       :style="{ transform: `translateY(${scrollY * 0.5}px)` }"
@@ -39,7 +42,8 @@ onUnmounted(() => {
             Desde el concepto hasta la finalización, hacemos realidad tus sueños de construcción.
           </p>
           <button
-            class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
+            @click="navigate('contacta')"
+            class="bg-white border-2 border-gray-600 text-gray-600 font-bold py-4 px-10 rounded-full text-lg shadow-xl hover:shadow-2xl"
           >
             Obtén un Presupuesto Gratis
           </button>

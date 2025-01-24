@@ -1,12 +1,23 @@
+<script setup>
+const scrollToSection = (sectionId) => {
+  const section = document.getElementById(sectionId)
+  if (section) {
+    section.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
+  }
+}
+</script>
 <template>
   <footer class="bg-gray-900 text-white pt-16 pb-8">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <!-- Columna 1: Información de la empresa -->
         <div class="space-y-4">
-          <h3 class="text-2xl font-bold text-primary">Constructora Excelencia</h3>
+          <h3 class="text-2xl font-bold text-primary">Constructora BestBuild</h3>
           <p class="text-gray-400 text-sm leading-relaxed">
-            Más de 20 años construyendo sueños y transformando espacios. Comprometidos con la
+            Más de 40 años construyendo sueños y transformando espacios. Comprometidos con la
             calidad y la innovación en cada proyecto.
           </p>
           <div class="flex items-center mt-4 space-x-2">
@@ -19,24 +30,36 @@
           </div>
         </div>
 
-        <!-- Columna 2: Enlaces rápidos -->
+        <!-- Columna 2: Sección de Enlaces Rápidos -->
         <div class="space-y-4">
           <h4 class="text-lg font-semibold">Enlaces Rápidos</h4>
           <ul class="space-y-2">
             <li>
-              <a href="#" class="text-gray-400 hover:text-primary transition-colors"
-                >Sobre nosotros</a
+              <a
+                href="#about"
+                @click.prevent="scrollToSection('about')"
+                class="text-gray-400 hover:text-primary transition-colors cursor-pointer"
               >
+                Sobre nosotros
+              </a>
             </li>
             <li>
-              <a href="#" class="text-gray-400 hover:text-primary transition-colors">Proyectos</a>
+              <a
+                href="#projects"
+                @click.prevent="scrollToSection('projects')"
+                class="text-gray-400 hover:text-primary transition-colors cursor-pointer"
+              >
+                Proyectos
+              </a>
             </li>
             <li>
-              <a href="#" class="text-gray-400 hover:text-primary transition-colors">Servicios</a>
-            </li>
-            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
-            <li>
-              <a href="#" class="text-gray-400 hover:text-primary transition-colors">Contacto</a>
+              <a
+                href="#services"
+                @click.prevent="scrollToSection('services')"
+                class="text-gray-400 hover:text-primary transition-colors cursor-pointer"
+              >
+                Servicios
+              </a>
             </li>
           </ul>
         </div>
@@ -110,7 +133,7 @@
       <!-- Sección inferior -->
       <div class="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
         <div class="mb-4 md:mb-0">
-          © 2024 Constructora Excelencia. Todos los derechos reservados.
+          © 2024 Constructora BestBuild. Todos los derechos reservados.
         </div>
         <div class="flex space-x-4">
           <a href="#" class="hover:text-primary transition-colors">Términos de servicio</a>

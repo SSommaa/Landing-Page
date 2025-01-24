@@ -1,5 +1,5 @@
 <script setup>
-import Projects from './ProjectCard.vue'
+import Projects from './Cards/ProjectCard.vue'
 import Imagen1 from '../assets/Images/burj-al-arab-desde-arriba.webp'
 import Imagen2 from '../assets/Images/BlackMansion.webp'
 import Imagen3 from '../assets/Images/DubaiMall.webp'
