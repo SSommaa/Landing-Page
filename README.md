@@ -66,7 +66,7 @@ npm  run  dev
 
 Basandome en los estandares de la comunidad de desarrolladores para la estructura que muestro anteriormente debido a que es la nomnclatura mas extendida y entendible por los desarrolladores, no he decidido yo los nombres pero si considero que son los mejores nombres posibles.
 
-Considerando que la API proporcionada no facilitaba passwords para hacer las comprobaciónes de login he llegado a la conclusion de que una posible seria almacenar los datos en localStorage, aunque no es una practica recomendable ya que se deberia almacenar en la base de datos de manera encriptada, para poder hacer pruebas es una solución factible a corto plazo.
+Considerando que la API proporcionada no facilitaba passwords para hacer las comprobaciónes de login he llegado a la conclusion de que una posible solucion seria almacenar los datos en localStorage, aunque no es una practica recomendable ya que se deberia almacenar en la base de datos de manera encriptada, para poder hacer pruebas es una solución factible a corto plazo.
 
 Me he decantado por utilizar axios para realizar las peticiones debido a que es mas sencillo de utilizar y captura los errores de red y de HTTP automáticamente.
 
