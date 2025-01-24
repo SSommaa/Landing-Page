@@ -1,8 +1,6 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
-import axios from 'axios'
 import { useRouter } from 'vue-router'
-import alertify from 'alertifyjs'
 import 'alertifyjs/build/css/alertify.min.css'
 import 'alertifyjs/build/css/themes/default.min.css'
 import { handleRegister } from '@/services/auth.service'
@@ -53,7 +51,6 @@ const register = async () => {
     await handleRegister(email, password)
     const token = localStorage.getItem('authToken')
     if (token) {
-      // Redirigir solo cuando el token esté correctamente guardado
       router.push('profile')
     } else {
       throw new Error('Error al guardar el token en localStorage.')

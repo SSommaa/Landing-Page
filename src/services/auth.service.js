@@ -13,8 +13,6 @@ export const handleRegister = async (email, password) => {
       password: password.value,
     })
     localStorage.setItem('authToken', response.data.token)
-
-    // Asegurarse de que el token esté en localStorage antes de redirigir
   } catch (error) {
     alertify.warning(error.response.data.error || 'Error en el registro')
   }

@@ -18,7 +18,6 @@ const Login = async () => {
   await handleLogin(email, password)
   const token = localStorage.getItem('authToken')
   if (token) {
-    // Redirigir solo cuando el token esté correctamente guardado
     router.push('profile')
   } else {
     throw new Error('Error al guardar el token en localStorage.')
