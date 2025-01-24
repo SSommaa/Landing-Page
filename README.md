@@ -17,6 +17,9 @@ Este proyecto es un concepto de landing para una prueba tecnica
 - **Iconos** Lucide Vue
 
 - **Enrutamiento** Vue Router
+## Deploy en Vercel
+https://landing-page-x1rb.vercel.app
+
 
 ## Requisitos
 
