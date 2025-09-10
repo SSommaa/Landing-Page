@@ -1,7 +1,6 @@
 <script setup>
-import { ref, onMounted, onUpdated } from 'vue'
+import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { handleLogin } from '@/services/auth.service'
 
 const router = useRouter()
 const email = ref('')
@@ -10,29 +9,22 @@ const errorMessage = ref('')
 const isLoading = ref(false)
 const showPassword = ref(false)
 
-onMounted(() => {
-  if (localStorage.getItem('authToken')) {
-    router.push('profile')
-  }
-})
-
 const Login = async () => {
   isLoading.value = true
   errorMessage.value = ''
   
-  try {
-    await handleLogin(email, password)
-    const token = localStorage.getItem('authToken')
-    if (token) {
+  // Simular proceso de login
+  setTimeout(() => {
+    isLoading.value = false
+    
+    // Validación básica simulada
+    if (email.value && password.value) {
+      // Redirigir al perfil después del "login"
       router.push('profile')
     } else {
-      throw new Error('Error al guardar el token en localStorage.')
+      errorMessage.value = 'Por favor completa todos los campos'
     }
-  } catch (error) {
-    errorMessage.value = error.message || 'Error al iniciar sesión'
-  } finally {
-    isLoading.value = false
-  }
+  }, 1500)
 }
 
 const togglePasswordVisibility = () => {

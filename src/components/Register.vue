@@ -1,15 +1,6 @@
 <script setup>
-import { ref, reactive, onMounted } from 'vue'
+import { ref, reactive } from 'vue'
 import { useRouter } from 'vue-router'
-import 'alertifyjs/build/css/alertify.min.css'
-import 'alertifyjs/build/css/themes/default.min.css'
-import { handleRegister } from '@/services/auth.service'
-
-onMounted(() => {
-  if (localStorage.getItem('authToken')) {
-    router.push('profile')
-  }
-})
 
 const router = useRouter()
 const email = ref('')
@@ -67,20 +58,13 @@ const validateForm = () => {
 const register = async () => {
   if (validateForm()) {
     isLoading.value = true
-    try {
-      await handleRegister(email, password)
-      const token = localStorage.getItem('authToken')
-      if (token) {
-        router.push('profile')
-      } else {
-        throw new Error('Error al guardar el token en localStorage.')
-      }
-    } catch (error) {
-      // Handle registration error
-      console.error('Registration error:', error)
-    } finally {
+    
+    // Simular proceso de registro
+    setTimeout(() => {
       isLoading.value = false
-    }
+      // Redirigir al perfil después del "registro"
+      router.push('profile')
+    }, 2000)
   }
 }
 
