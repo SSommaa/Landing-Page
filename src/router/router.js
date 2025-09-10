@@ -6,6 +6,7 @@ import Login from '../components/Login.vue'
 import Register from '../components/Register.vue'
 import Profile from '../components/Profile.vue'
 import ContactForm from '../components/ContactForm.vue'
+
 // Definir las rutas
 const routes = [
   {
@@ -39,14 +40,32 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior(to) {
-    if (to.hash) {
-      return {
-        el: to.hash,
-        behavior: 'smooth',
-        top: 100, // Ajusta el espacio del header fijo
-      }
+  scrollBehavior(to, from, savedPosition) {
+    // Si hay una posición guardada (por ejemplo, al usar el botón atrás)
+    if (savedPosition) {
+      return savedPosition
     }
+    
+    // Si hay un hash en la URL
+    if (to.hash) {
+      // Pequeño delay para asegurar que el componente se haya montado
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          const element = document.getElementById(to.hash.slice(1))
+          if (element) {
+            resolve({
+              el: to.hash,
+              behavior: 'smooth',
+              top: 100, // Ajusta el espacio del header fijo
+            })
+          } else {
+            resolve({ top: 0 })
+          }
+        }, 100)
+      })
+    }
+    
+    // Por defecto, ir al top
     return { top: 0 }
   },
 })
